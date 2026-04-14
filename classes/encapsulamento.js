@@ -1,10 +1,16 @@
-class Carro {
-    constructor(nome, ano ){
+ export class Carro {
+    constructor(nome, ano, cor) {
         this.nome = nome;
         this.ano = ano;
+        this.cor = cor;
+    }
+    idade(){
+        const dataAtual = new Date();
+        return dataAtual.getFullYear() - this.ano;
     }
 }
 
-const meuCarro = new Carro("Porsche 911 Turbo S", 2026);
+const meuCarro = new Carro("Creta N line ", 2025, "Cinza Chumbo");   
 console.log(meuCarro.nome);
-console.log(meuCarro.ano);
+console.log("O ano do meu carro é " + meuCarro.ano);
+console.log(meuCarro.cor);
